@@ -16,6 +16,15 @@ catalog:  true
 tags:
   
   - 生活
+  - Linux基础
+  - Shell
+  - Linux安全
+  - windows安全
+  - hacker
+  - tools
+  - Linux运维
+  - Python
+  - C/C++
 ---
 
 ## hi
