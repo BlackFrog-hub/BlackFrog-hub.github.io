@@ -22,6 +22,7 @@ tags:
   - windows安全
   - hacker
   - tools
+  - kali
   - Linux运维
   - Python
   - C/C++
