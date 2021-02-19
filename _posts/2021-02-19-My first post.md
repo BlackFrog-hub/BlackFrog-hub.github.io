@@ -15,8 +15,8 @@ catalog:  true
 
 tags:
   
-  -生活
+  - 生活
 ---
 
-##hi
+## hi
 >这是我的第一篇博客
