@@ -12,7 +12,7 @@ tags:
 ---
 
 
-##### 今天更新kali源的时候报如下错误：Release 文件过期，仓库更新不会被应用
+#### 今天更新kali源的时候报如下错误：Release 文件过期，仓库更新不会被应用
 
 ```bash
 root@kali:~# apt-get update
@@ -55,7 +55,7 @@ E: http://mirrors.aliyun.com/kali/dists/kali-rolling/InRelease 的 Release 文�
 ```
 
 
-> 最后了解到是可能是时间问题，于是查看了当前的系统时间和硬件时间
+> 最后了解到可能是系统时间与当前时间不一致的问题，于是查看了当前的系统时间和硬件时间
     
 ```bash
 root@kali:~# date
