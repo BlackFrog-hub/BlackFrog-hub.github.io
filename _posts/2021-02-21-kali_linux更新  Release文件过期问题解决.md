@@ -23,20 +23,8 @@ E: http://dl.google.com/linux/chrome/deb/dists/stable/InRelease 的 Release 文�
 E: http://mirrors.aliyun.com/kali/dists/kali-rolling/InRelease 的 Release 文件已经过期(已经过期了 19小时 45分 47秒)。该仓库的更新将不会应用。
 ```
 
-- 试了第一种更新签名依然无法更新
-    
-```bash
-root@kali:~# wget -q -O - https://archive.kali.org/archive-key.asc | apt-key add
-OK
-root@kali:~# apt-get update
-获取:1 http://dl.google.com/linux/chrome/deb stable InRelease [1,811 B]
-获取:2 http://mirrors.aliyun.com/kali kali-rolling InRelease [30.5 kB]                                                                                                                                                                    
-正在读取软件包列表... 完成                                                                                                                                                                                                                
-E: http://dl.google.com/linux/chrome/deb/dists/stable/InRelease 的 Release 文件已经过期(已经过期了 3小时 22分 55秒)。该仓库的更新将不会应用。
-E: http://mirrors.aliyun.com/kali/dists/kali-rolling/InRelease 的 Release 文件已经过期(已经过期了 19小时 37分 9秒)。该仓库的更新将不会应用。
-```
-- 第二种更新签名依然无法更新
-
+> 更新签名依然无法更新
+   
 ```bash
 root@kali:~# apt-key adv --keyserver hkp://keys.gnupg.net --recv-keys 7D8D0BF6
 Executing: /tmp/apt-key-gpghome.uuX2k5fh44/gpg.1.sh --keyserver hkp://keys.gnupg.net --recv-keys 7D8D0BF6
@@ -55,7 +43,19 @@ E: http://mirrors.aliyun.com/kali/dists/kali-rolling/InRelease 的 Release 文�
 E: http://dl.google.com/linux/chrome/deb/dists/stable/InRelease 的 Release 文件已经过期(已经过期了 3小时 21分 52秒)。该仓库的更新将不会应用。
 ```
 
-- 最后了解到是有可能是时间问题，于是查看了系统时间和硬件时间
+```bash
+root@kali:~# wget -q -O - https://archive.kali.org/archive-key.asc | apt-key add
+OK
+root@kali:~# apt-get update
+获取:1 http://dl.google.com/linux/chrome/deb stable InRelease [1,811 B]
+获取:2 http://mirrors.aliyun.com/kali kali-rolling InRelease [30.5 kB]                                                                                                                                                                    
+正在读取软件包列表... 完成                                                                                                                                                                                                                
+E: http://dl.google.com/linux/chrome/deb/dists/stable/InRelease 的 Release 文件已经过期(已经过期了 3小时 22分 55秒)。该仓库的更新将不会应用。
+E: http://mirrors.aliyun.com/kali/dists/kali-rolling/InRelease 的 Release 文件已经过期(已经过期了 19小时 37分 9秒)。该仓库的更新将不会应用。
+```
+
+
+> 最后了解到是可能是时间问题，于是查看了当前的系统时间和硬件时间
     
 ```bash
 root@kali:~# date
@@ -63,27 +63,30 @@ root@kali:~# date
 root@kali:~#  hwclock --show
 2021-02-18 11:50:28.803209-05:00
 ```
-- 果然是时间与当前时间不一致导致的问题，于是安装NTPdate并查看是否安装成功
+> 果然是与当前时间不一致导致的问题，于是安装NTPdate
 
 ```bash
 root@kali:~# apt-get install ntpdate
 root@kali:~# ntpdate
 usage: ntpdate [-46bBdqsuv] [-a key#] [-e delay] [-k file] [-p samples] [-o version#] [-t timeo] server ...
 ```
-- 对NTP服务进行如下配置
+> 对NTP服务进行如下配置
 
-- Linux系统时间同步：让当前服务器同步到网络时间来更新当前服务器的时间。如让当前服务器时间同步到ntp1.aliyun.com
+>> 系统时间同步：让当前服务器同步到网络时间来更新当前服务器的时间。如让当前服务器时间同步到ntp1.aliyun.com
     
 ```bash
 root@kali:~# ntpdate ntp1.aliyun.com
 21 Feb 21:40:47 ntpdate[8317]: step time server 120.25.115.20 offset +294167.553122 sec
 ```
-- Linux硬件时间的同步：修改服务器硬件时间映射到我们系统的时间
+>> 硬件时间同步：修改服务器硬件时间映射到我们系统的时间
 
-    root@kali:~# hwclock --systohc
-    root@kali:~# hwclock -w
-    
-- 查看时间是否同步，结果都显示为当前的internet时间
+```bash  
+root@kali:~# hwclock --systohc
+or
+root@kali:~# hwclock -w
+```
+     
+> 查看时间是否同步，结果都显示为当前的internet时间
 
 ```bash
   root@kali:~# date
@@ -91,7 +94,7 @@ root@kali:~# ntpdate ntp1.aliyun.com
   root@kali:~#  hwclock
   2021-02-21 21:41:57.962729-05:00
 ```
-- 再次执行更新
+> 再次执行更新
     
 ```bash
 root@kali:~# apt-get update
