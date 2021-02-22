@@ -72,7 +72,7 @@ msf5 > db_discomnect
 ```bash
 msf5 > cat  /usr/share/metasploit-framework/config/database.yml 
 ```
-#### 手动连接 db_connect username:password=@localhost/databases_name
+#### 手动连接 db_connect username:password=@localhost/databasesname
 ```bash
 msf5 > db_connect msf:Cqvf7sBFF6OwTZS0PNVA75czugvajjo65E9q+/qKfyc=@localhost/msf
 Connected to Postgres data service: localhost/msf
