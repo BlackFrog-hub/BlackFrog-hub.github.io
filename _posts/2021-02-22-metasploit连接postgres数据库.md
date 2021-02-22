@@ -12,7 +12,7 @@ tags:
     - Linux
 ---
 
-###  metasploit连接postgres数据库
+#  metasploit连接postgres数据库
 #### db_status检测连接状态，发现未连接
 ```bash
 msf5 > db_status
