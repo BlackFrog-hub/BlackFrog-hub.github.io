@@ -126,7 +126,9 @@ root@kali:~#
 
 - 取消加载banner  `msfconsole -q`
 
-### connect命令 connect也就是netcat，msf的connect反应速度几乎无延迟,并且msf是支持外部命令调用，也可以使用nc
+### connect命令 
+
+- connect也就是netcat，msf的connect反应速度几乎无延迟,并且msf是支持外部命令调用，也可以使用nc
 ```bash
 msf5 > connect 192.168.1.6 8081
 [*] Connected to 192.168.1.6:8081 (via: 0.0.0.0:0)
@@ -182,7 +184,6 @@ the <a href="mailto:postmaster@localhost">webmaster</a>.
 ### show命令
 
 - show指定功能模块
-
 ```bash
 msf5 > show nops 
 
@@ -204,7 +205,6 @@ NOP Generators
 ```
 
 - show options查看功能的各种参数
-
 ```bash
 msf5 > show options 
 
@@ -226,7 +226,6 @@ Global Options:
 ### search命令
 
 - 搜索指定类型
-
 ```bash
 5 > search  type:post
 
@@ -258,7 +257,6 @@ Matching Modules
 ```
 
 - 搜素指定内容
-
 ```bash
 msf5 > search ms08_067
 
@@ -271,7 +269,6 @@ Matching Modules
 ```
 
 - 搜索指定cve:ID
-
 ```bash
 msf5 > search cve:2020
 
@@ -306,7 +303,6 @@ Matching Modules
 ```
 
 - 搜索带有指定的内容
-
 ```bash
 msf5 > search name:mysql
 
