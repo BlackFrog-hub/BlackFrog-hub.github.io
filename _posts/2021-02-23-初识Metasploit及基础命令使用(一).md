@@ -207,6 +207,7 @@ NOP Generators
 ```
 
 - show options查看功能的各种参数
+
 ```bash
 msf5 > show options 
 
