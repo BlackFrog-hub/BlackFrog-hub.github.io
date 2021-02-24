@@ -180,7 +180,9 @@ the <a href="mailto:postmaster@localhost">webmaster</a>.
 </html>
 ```
 ### show命令
+
 - show指定功能模块
+
 ```bash
 msf5 > show nops 
 
@@ -200,7 +202,9 @@ NOP Generators
    8  x86/opty2                         manual  No     Opty2
    9  x86/single_byte                   manual  No     Single Byte
 ```
+
 - show options查看功能的各种参数
+
 ```bash
 msf5 > show options 
 
@@ -220,7 +224,9 @@ Global Options:
    TimestampOutput    false                Prefix all console output with a timestamp
 ```
 ### search命令
+
 - 搜索指定类型
+
 ```bash
 5 > search  type:post
 
@@ -250,7 +256,9 @@ Matching Modules
    18   post/hardware/automotive/canprobe                                        normal     No     Module to Probe Different Data Points in a CAN Packet
    19   post/hardware/automotive/getvinfo                                        normal     No     Get the Vehicle Information Such as the VIN from the Target Module
 ```
+
 - 搜素指定内容
+
 ```bash
 msf5 > search ms08_067
 
@@ -261,7 +269,9 @@ Matching Modules
    -  ----                                 ---------------  ----   -----  -----------
    0  exploit/windows/smb/ms08_067_netapi  2008-10-28       great  Yes    MS08-067 Microsoft Server Service Relative Path Stack Corruption
 ```
+
 - 搜索指定cve:ID
+
 ```bash
 msf5 > search cve:2020
 
@@ -294,7 +304,9 @@ Matching Modules
    21  exploit/windows/local/cve_2020_0796_smbghost                2020-03-13       good       Yes    SMBv3 Compression Buffer Overflow
    22  exploit/windows/misc/hp_operations_agent_coda_8c            2012-07-09       normal     Yes    HP Operations Agent Opcode coda.exe 0x8c Buffer Overflow
 ```
+
 - 搜索带有指定的内容
+
 ```bash
 msf5 > search name:mysql
 
