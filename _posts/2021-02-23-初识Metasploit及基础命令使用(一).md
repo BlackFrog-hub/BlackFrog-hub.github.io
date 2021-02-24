@@ -12,8 +12,65 @@ tags:
 ---
 
 ### 什么是metasploit？
-- 
+- Metasploit不仅仅是一种工具；它是一个完整的框架，提供了复杂任务自动化所需的基础结构,并可以识别信息安全程序中的缺陷。
+Metasploit允许您轻松构建攻击媒介，以增强其利用，负载，编码器等，从而创建和执行更高级的攻击。
 
+###  Metasploit的简史
+
+-   Metasploit最初是由HD Moore研发和构思的，他于2003年10月发布了他的第一版基于Perl的Metasploit，共有11个漏洞利用。
+
+-   在Spoonm的帮助下，HD在2004年4月发布了对项目Metasploit 2.0的完全重写。此版本包括19个漏洞利用和27多个有效载荷。此版本发布后不久，Matt Miller（Skape）加入了Metasploit开发团队，并且随着该项    目的流行，Metasploit框架得到了信息安全社区的大力支持，并迅速成为渗透测试和开发的必要工具。
+
+-   于2007年发布了在完全用Ruby编程语言重写之后 Metasploit 3.0。
+
+-   从Perl到Ruby的框架花费了18个月的时间，并产生了超过150,000行新代码。随着3.0版本的发布，Metasploit看到了安全社区的广泛采用
+
+-   2009年秋天，Metasploit被漏洞扫描领域的领先者Rapid7收购Rapid7发布了两种基于 Metasploit框架的商业产品：Metasploit Express和Metasploit Pro。Metasploit Express是Metasploit框架的简化版本，具有GUI和其他功能（包括报告）以及其他有用功能。Metasploit Pro是Metasploit Express的扩展版本，它吹捧协作和组渗透测试以及一键式虚拟专用网络（VPN）隧道等功能。
+
+- 现在Metasploit迎来了 6.0时代
+
+
+### metasploit主目录 /usr/share/metasploit-framework/
+```bash
+oot@kali:~# cd /usr/share/metasploit-framework/
+root@kali:/usr/share/metasploit-framework# ls
+app     data  documentation  Gemfile.lock  metasploit-framework.gemspec  msfconsole  msfdb            msfrpc   msfupdate  msf-ws.ru  Rakefile  script-exploit   script-recon  tools
+config  db    Gemfile        lib           modules                       msfd        msf-json-rpc.ru  msfrpcd  msfvenom   plugins    ruby      script-password  scripts       vendor
+```
+### modules目录下为六大模块
+```bash
+root@kali:/usr/share/metasploit-framework/modules# ls
+auxiliary  encoders  evasion  exploits  nops  payloads  post
+```
+- auxiliary 负责执行信息收集、扫描、嗅探、指纹识别、口令猜测和Dos攻击等功能的辅助模块
+
+- exploits 利用系统漏洞进行攻击的动作，此模块对应每一个具体漏洞的攻击方法（主动、被动） 
+
+- encoders 对payload进行加密，躲避AntiVirus检查的模块
+
+- payloads，用于拿shell
+
+- nops 提高payload稳定性及维持大小。在渗透攻击构造恶意数据缓冲区时，常常要在真正要执行的Shellcode之前添加一段空指令区， 这样当触发渗透攻击后跳转执行ShellCode时，有一个较大的安全着陆区，从而避免受到内存 地址随机化、返回地址计算偏差等原因造成的ShellCode执行失败，提高渗透攻击的可靠性。
+
+- post 后期渗透模块。在取得目标系统远程控制权后，进行一系列的后渗透攻击动作，如获取敏感信息、跳板攻击等操作 
+
+                                                        
+### 针对不同系统设备漏洞的Ruby脚本
+```bash
+root@kali:/usr/share/metasploit-framework/modules# cd exploits/
+root@kali:/usr/share/metasploit-framework/modules/exploits# ls
+aix  android  apple_ios  bsd  bsdi  dialup  example_linux_priv_esc.rb  example.rb  example_webapp.rb  firefox  freebsd  hpux  irix  linux  mainframe  multi  netware  openbsd  osx  qnx  solaris  unix  windows
+root@kali:/usr/share/metasploit-framework/modules/exploits# cd windows/
+root@kali:/usr/share/metasploit-framework/modules/exploits/windows# ls
+antivirus  backdoor    brightstor  dcerpc  emc         firewall  games  ibm  imap   ldap     local  lpd   mmsp      mssql  nfs   novell  oracle  postgres  rdp    sip  smtp  ssl     tftp       vnc  winrm
+arkeia     backupexec  browser     email   fileformat  ftp       http   iis  isapi  license  lotus  misc  motorola  mysql  nntp  nuuo    pop3    proxy     scada  smb  ssh   telnet  unicenter  vpn  wins
+root@kali:/usr/share/metasploit-framework/modules/exploits/windows# cd smb/
+root@kali:/usr/share/metasploit-framework/modules/exploits/windows/smb# ls
+generic_smb_dll_injection.rb  ms04_007_killbill.rb  ms06_025_rasmans_reg.rb  ms06_066_nwwks.rb           ms09_050_smb2_negotiate_func_index.rb  ms17_010_eternalblue.rb       psexec_psh.rb            smb_relay.rb
+group_policy_startup.rb       ms04_011_lsass.rb     ms06_025_rras.rb         ms06_070_wkssvc.rb          ms10_046_shortcut_icon_dllloader.rb    ms17_010_eternalblue_win8.py  psexec.rb                timbuktu_plughntcommand_bof.rb
+ipass_pipe_exec.rb            ms04_031_netdde.rb    ms06_040_netapi.rb       ms07_029_msdns_zonename.rb  ms10_061_spoolss.rb                    ms17_010_psexec.rb            smb_delivery.rb          webexec.rb
+ms03_049_netapi.rb            ms05_039_pnp.rb       ms06_066_nwapi.rb        ms08_067_netapi.rb          ms15_020_shortcut_icon_dllloader.rb    netidentity_xtierrpcpipe.rb   smb_doublepulsar_rce.rb
+```
 ### 查看帮助命令-h,help,?
 ```bash
 msf5 > workspace -h
