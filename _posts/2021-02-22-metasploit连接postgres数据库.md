@@ -7,7 +7,7 @@ author:     BlackFrog-hub
 header-img: img/msf_bg.jpg
 catalog: true
 tags:
-    - Metasploit
+    - metasploit
     - kali
     - Linux
 ---
