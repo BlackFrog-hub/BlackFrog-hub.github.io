@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      metasploit工作区使用及主机扫描
-subtitle:   metasploit工作区
+subtitle:   metasploit工作区及主机扫描
 date:       2021-03-06
 author:     BlackFrog
 header-img: img/post-bg-ios9-web.jpg
@@ -14,7 +14,7 @@ tags:
 ### metasploit工作区使用
 
 - 启动metasploit `msfconsole`
-![]()
+![](http://blackfrog.top/img/msf_bg_3.png)
 
 - 查看数据库是否连接 `db_status`
 
