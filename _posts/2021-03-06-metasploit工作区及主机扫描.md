@@ -45,6 +45,7 @@ tags:
 - 启动db_nmap扫描主机
 ![](http://blackfrog.top/img/msf_workspaces_7.png)
 
+- 扫描结束
 ![](http://blackfrog.top/img/msf_workspaces_8.png)
 
 - 获取主机ip
