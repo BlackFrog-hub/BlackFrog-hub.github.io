@@ -36,3 +36,25 @@ tags:
 - 删除所有工作区  `workspaces -D` 
 
 ![](http://blackfrog.top/img/msf_workspaces_5.png)
+
+### metasploit主机扫描
+
+- 启动metasploit并创建工作区
+
+![](http://blackfrog.top/img/msf_workspaces_6.png)
+
+- 启动db_nmap扫描主机
+
+![](http://blackfrog.top/img/msf_workspaces_7.png)
+
+- 工作区查看
+
+![](http://blackfrog.top/img/msf_workspaces_8.png)
+
+- 获取主机ip
+
+![](http://blackfrog.top/img/msf_workspaces_9.png)
+
+- 分析目标主机，如果出现漏洞会列出相应的漏洞利用模块
+
+![](http://blackfrog.top/img/msf_workspaces_10.png)
