@@ -18,7 +18,7 @@ tags:
 ![](http://blackfrog.top/img/msf_workspaces_1.png)
 
 
-- 创建工作区 `workspaces -a name` 查看工作区 `workspaces -v`  切换工作区 `workspaces name`
+- 创建工作区 `workspaces -a name` 切换工作区 `workspaces name` 查看工作区 `workspaces -v`
 
 ![](http://blackfrog.top/img/msf_workspaces_2.png) 
 
