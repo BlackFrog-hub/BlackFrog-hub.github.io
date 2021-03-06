@@ -4,7 +4,7 @@ title:     metasploit连接postgres数据库
 subtitle:   metasploit连接postgres数据库
 date:       2021-02-22
 author:     BlackFrog-hub
-header-img: img/msf_bg.jpg
+header-img: img/msf_bg.png
 catalog: true
 tags:
     - metasploit
