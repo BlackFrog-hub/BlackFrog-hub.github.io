@@ -2,9 +2,9 @@
 
 layout: post
 
-title:  linux下MySQL数据库的安装
+title:  linux下mariadb数据库的安装
 
-subtitle: centos下MySQL安装 
+subtitle: centos7安装 mariadb数据库
 
 date: 2021-03-09
 
@@ -16,7 +16,8 @@ catalog:  true
 
 tags:
   - Linux
-  - mysql
+  - mariadb
+  - centos
   
 ---
 
