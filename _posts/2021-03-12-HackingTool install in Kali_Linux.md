@@ -2,7 +2,7 @@
 
 layout: post
 
-title:  HackingTool install in kali_linux
+title:  HackingTool install in Kali_Linux
 subtitle: hackingtool install in kali_linux
 
 date: 2021-03-12
@@ -25,7 +25,7 @@ tags:
 
 ###  HackingTool是一款针对于渗透测试的多合一渗透测试套件，集成了许多黑客工具
 
-#### HackingTOOL Menu
+#### HackingTooL Menu
 
 - 匿名隐藏工具
 - 信息收集工具
@@ -59,7 +59,7 @@ tags:
 
 ### HackingTool安装
 
-- hackingtool基于Python开发所以确保Linux环境下已经安装了Python3+，执行`git clone + url`download在本地,并确定Python环境
+- HackingTool基于Python开发所以确保Linux环境下已经安装了Python3+，执行`git clone + url`download在本地,并确定Python环境
 
 ![](http://blackfrog.top/img/hackingtool_git.png)
 
