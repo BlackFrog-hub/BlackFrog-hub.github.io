@@ -2,7 +2,7 @@
 
 layout: post
 
-title:  hackingtool install
+title:  HackingTool 安装
 subtitle: hackingtool install in kali_linux
 
 date: 2021-03-12
@@ -23,25 +23,37 @@ tags:
 ---
 
 ###  HackingTool是一款针对于渗透测试的多合一渗透测试套件，集成了许多黑客工具
+##### HackingTOOL Menu
 
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
+- 匿名隐藏工具
+- 信息收集工具
+- 密码攻击工具
+- 无线攻击工具
+- SQL注入工具
+- 网络钓鱼攻击工具
+- Web攻击工具
+- 后渗透工具
+- 信息取证工具
+- Payload创建工具
+- 漏洞利用框架
+- 逆向工程工具
+- DDOS攻击工具
+- 远程管理工具(RAT)
+- XSS攻击工具
+- Steganograhy工具
+- 其他工具
+  - 社交媒体暴力破解
+  - Android骇客工具
+  - IDN同形异义词攻击
+  - 电子邮件验证工具
+  - 哈希破解工具
+  - WiFi取消验证
+  - 社交媒体查找器
+  - payload注入器
+  - 网页抓取
+  - 混合工具
+
+
 
 ### HackingTool安装
 
