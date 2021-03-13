@@ -60,11 +60,9 @@ tags:
 ### HackingTool安装
 
 - HackingTool基于Python开发所以确保Linux环境下已经安装了Python3+，执行`git clone + url`download在本地,并确定Python环境
-
 ![](http://blackfrog.top/img/hackingtool_git.png)
 
 - 赋予775权限，并进入该目录
-
 ![](http://blackfrog.top/img/hackingtool_1.png)
 
 - 先确定是否安装了pip3，执行`sudo pip3 install -r requirement.txt`
