@@ -66,55 +66,39 @@ tags:
 ![](http://blackfrog.top/img/hackingtool_1.png)
 
 - 先确定是否安装了pip3，执行`sudo pip3 install -r requirement.txt`
-
 ![](http://blackfrog.top/img/hackingtool_2.png)
 
 - 将`install.sh`中`google`改为`baidu`,基于国内的环境懂得都懂
-
 ![](http://blackfrog.top/img/hackingtool_3.png)
 
 - 执行`./install.sh`转到安装界面输入`1`进行安装
-
 ![](http://blackfrog.top/img/hackingtool_4.png)
 
 - 出现了`Installation Failed!!!` 顿时不详的预感！！！
-
 ![](http://blackfrog.top/img/hackingtool_5.png)
 
 - 果然报错无法启动，入坑开始
-
 ![](http://blackfrog.top/img/problem_1.png)
 
 - 通过了解应该是git的问题，所以重新编译Git安装，首先执行`sudo apt-get install build-essential fakeroot dpkg-dev -y`
-
 ![](http://blackfrog.top/img/problem_2.png)
 
 - 再执行`sudo apt-get build-dep git -y`
-
 ![](http://blackfrog.top/img/problem_3.png)
 
 - 执行`sudo apt-get install libcur14-openssl-dev -y`报错，出现了一个熟悉的报错
-
 ![](http://blackfrog.top/img/problem_4.png)
 
 - 执行'apt-get update'更新报错,果断换源再次执行`apt-get update` && `apt-get upgrade`更新成功
-
 ![](http://blackfrog.top/img/problem_5.png)
 
 - 再次安装hackingtool，成功！！！因为源的问题绕自己给自己挖了一个坑，还是应该要有执行更新的习惯QAQ
-
 ![](http://blackfrog.top/img/problem_6.png)
 
 - HackingTool安装成功界面
-
 ![](http://blackfrog.top/img/hackingtool_6.png)
-
 ![](http://blackfrog.top/img/hackingtool_7.png)
-
 ![](http://blackfrog.top/img/hackingtool_8.png)
-
 ![](http://blackfrog.top/img/hackingtool_9.png)
-
 ![](http://blackfrog.top/img/hackingtool_10.png)
-
 ![](http://blackfrog.top/img/hackingtool_11.png)
