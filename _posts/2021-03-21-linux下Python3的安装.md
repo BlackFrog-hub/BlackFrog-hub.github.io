@@ -19,9 +19,9 @@ tags:
 ##### 查看是否有gcc `gcc --version`
 ![](http://black.top/img/python_install_2.png)
 ##### 补充安装依赖库
-yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel
+- `yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel`
 ![](http://black.top/img/python_install_3.png)
-##### 进入Python目录执行./configure --prefix=/usr/local/python37 --enable-optimizations  将Python3安装到指定路径 启用优化
+##### 进入Python目录执行`./configure --prefix=/usr/local/python37 --enable-optimizations`  将Python3安装到指定路径 启用优化
 ![](http://black.top/img/python_install_4.png)
 ##### 安装 `make && make install`
 ![](http://black.top/img/python_install_5.png)
