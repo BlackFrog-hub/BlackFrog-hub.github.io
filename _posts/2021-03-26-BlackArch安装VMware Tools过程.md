@@ -8,7 +8,7 @@ header-img: img/blackarch_bg.jpg
 catalog: true
 tags:
     - linux
-    - blackarch
+    - BlackArch
       
 ---
 
