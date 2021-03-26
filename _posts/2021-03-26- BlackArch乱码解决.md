@@ -12,7 +12,7 @@ tags:
       
 ---
 
-#####  
+#####  当我打开浏览器时出现了......
 ![](http://blackfrog.top/img/blackarch_luanma_1.png)
 ##### 安装中文字体`sudo pacman -S ttf-dejavu wqy-microhei wqy-zenhei`
 ![](http://blackfrog.top/img/blackarch_luanma_2.png)
