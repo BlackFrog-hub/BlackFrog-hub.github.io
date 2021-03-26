@@ -4,7 +4,7 @@ title:      BlackArch下MSF连接Postgresql
 subtitle:   BlackArch下MSF连接Postgresql
 date:       2021-03-25
 author:     BlackFrog-hub
-header-img: img/blackarch_bg.jpg
+header-img: img/blackarch_bg_1.jpg
 catalog: true
 tags:
     - msf
