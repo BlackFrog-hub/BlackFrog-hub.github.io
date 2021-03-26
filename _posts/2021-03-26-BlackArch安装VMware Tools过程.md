@@ -4,7 +4,7 @@ title:      BlackArch安装VMware Tools过程
 subtitle:   BlackArch安装VMware Tools
 date:       2021-03-26
 author:     BlackFrog-hub
-header-img: img/blackarch_bg.jpg
+header-img: img/blackarch_bg_1.jpg
 catalog: true
 tags:
     - linux
