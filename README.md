@@ -2,8 +2,8 @@
 
 [//]: #
 
-作者：CandyBullet
-链接：https://www.imooc.com/article/23400
+[//]: # 作者：CandyBullet
+[//]: # 链接：https://www.imooc.com/article/23400
 [//]: #
 
 作者：CandyBullet
