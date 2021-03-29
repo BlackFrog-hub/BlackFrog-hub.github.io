@@ -1,10 +1,9 @@
 
+/*:
 
-[//]: #
+ 作者：CandyBullet
+ 链接：https://www.imooc.com/article/23400
 
-[//]: # 作者：CandyBullet
-[//]: # 链接：https://www.imooc.com/article/23400
-[//]: #
 
 作者：CandyBullet
 链接：https://www.imooc.com/article/23400
@@ -25,7 +24,7 @@
 >
 ### [查看博客戳这里 👆](http://qiubaiying.github.io)
 
-
+*/
 
 ## 使用
 
