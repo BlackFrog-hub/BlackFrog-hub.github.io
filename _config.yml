@@ -4,7 +4,7 @@ SEOTitle: BlackFrog-hub | Blog
 header-img: img/pexels-matt-hardy-1842866.jpg #img/pexels-charlotte-may-5965746.jpg
 email: shuanglinhu38@gmail.com
 description: "Every failure is leading towards success."
-keyword: "BY, BY Blog, BlackFrog's Blog, BlackFrog, BlackFrog, Andriod, linux, kali"
+keyword: " BlackFrog's Blog, Andriod, linux, kali"
 url: "http://BlackFrog-hub.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/BlackFrog-hub/BlackFrog-hub.github.io.git" # you code repository
